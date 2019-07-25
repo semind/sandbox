@@ -1,3 +1,6 @@
 FROM nginx:latest
 
-ENV NGINX_PORT $PORT
+ENV PORT $PORT
+
+COPY start.sh /tmp/start.sh
+CMD ["/tmp/start.sh"]
